@@ -9,10 +9,9 @@ This project uses [OpenAI's Whisper](https://github.com/openai/whisper) model to
 .
 ├── Dockerfile
 ├── README.md
-├── docker_delete.sh
 ├── docker_run.sh
+├── docker_delete.sh
 ├── transcribe_all.sh
-├── generate_example_audio.sh
 ├── data
 │   ├── todo
 │   │   ├── base
@@ -28,9 +27,9 @@ This project uses [OpenAI's Whisper](https://github.com/openai/whisper) model to
 │   ├── processing
 │   ├── done
 │   └── transcripts
+├── generate_example_audio.sh
 ├── example_audio_en.mp3
-├── requirements.txt
-└── tree.txt
+└── requirements.txt
 ```
 
 - `Dockerfile`: Defines the Docker image with Whisper and all necessary dependencies.
