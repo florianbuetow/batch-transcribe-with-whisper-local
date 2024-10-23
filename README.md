@@ -125,6 +125,7 @@ If you need to remove the Docker image after use, run the `docker_delete.sh` scr
 
 ## Troubleshooting
 
+- **Debugging**: If you create a virtual environment, you can run the `transcribe_all.sh` script directly to see any issues without docker in the way. Just ensure to `pip install -r requirements.txt` first and edit the `transcribe_all.sh` script to replace the absolute paths with relative ones. See inside the script for more details.
 - **File format**: Ensure that your audio files are in `.wav` or `.mp3` format. Other formats may not be supported by Whisper.
 - **Docker issues**: Ensure Docker is properly installed and running. Verify by checking the Docker version with `docker --version`.
 
