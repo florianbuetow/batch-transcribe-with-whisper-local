@@ -21,15 +21,17 @@ mkdir -p "$DONE_DIR"
 # Loop through all subfolders (model names) in the 'todo' directory
 for model_path in "$INPUT_DIR"/*; do
   model=$(basename "$model_path")
-  echo "FOUND MODEL $model in $INPUT_DIR"
+  echo "FOUND PROCESSING JOB(S) FOR MODEL $model in $INPUT_DIR/$model/"
   if [ -d "$INPUT_DIR/$model" ]; then
     # Create corresponding processing and done subfolders for the model
-    mkdir -p "$PROCESSING_DIR/$model"
-    mkdir -p "$DONE_DIR/$model"
 
     # Loop through all .wav and .mp3 files in the model's "todo" directory
     find "$INPUT_DIR/$model" -type f \( -iname "*.wav" -o -iname "*.mp3" \) | while read -r file; do
       if [ -f "$file" ]; then
+
+        mkdir -p "$DONE_DIR/$model"
+        mkdir -p "$PROCESSING_DIR/$model"
+
         # Move file to processing directory
         mv "$file" "$PROCESSING_DIR/$model/"
         FILENAME=$(basename "$file")
