@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Set the image name
-IMAGE_NAME="batch-transcribe-with-whisper"
+IMAGE_NAME="batch-transcribe-with-whisper-cpu"
 
 # Check if the Docker image exists
 if [[ "$(docker images -q $IMAGE_NAME 2> /dev/null)" != "" ]]; then
