@@ -1,5 +1,7 @@
 
-# Whisper Audio Transcription Docker Setup
+# Batch Transcribe Audiofiles using Whisper running on CPU with Docker
+
+If you are looking for the [faster GPU version look here](https://github.com/florianbuetow/batch-transcribe-with-whisper-local-gpu).
 
 This project uses [OpenAI's Whisper](https://github.com/openai/whisper) model to transcribe audio files inside a Docker container. The audio files are organized into a directory structure (`todo`, `processing`, `done`, and `transcripts`), and the Whisper model is selected by placing files into corresponding subfolders.
 
